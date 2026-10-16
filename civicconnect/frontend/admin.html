@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - CivicConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-city"></i> CivicConnect
+            </div>
+            <div class="nav-links">
+                <a href="admin-issues.html" class="nav-link">Issue Management</a>
+                <a href="analytics.html" class="nav-link">Analytics</a>
+                <a href="dashboard.html" class="nav-link">Citizen View</a>
+                <a href="#" id="adminLogout" class="nav-link btn-primary" style="background: var(--danger);">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="welcome-bar">
+            <h1><i class="fas fa-tachometer-alt"></i> Admin Dashboard</h1>
+            <div id="adminNotifBadge" style="position: relative;">
+                <i class="fas fa-bell" style="font-size: 1.5rem; cursor: pointer;"></i>
+                <span id="adminNotifCount" style="position: absolute; top: -5px; right: -10px; background: var(--danger); color: white; font-size: 10px; padding: 2px 6px; border-radius: 50%;">0</span>
+            </div>
+        </div>
+
+        <div class="admin-stats">
+            <div class="stat-item">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div class="stat-info">
+                    <h3 id="adminTotalIssues">0</h3>
+                    <p>Total Issues</p>
+                </div>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-user-plus"></i>
+                <div class="stat-info">
+                    <h3 id="adminTotalUsers">0</h3>
+                    <p>Registered Citizens</p>
+                </div>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-check-circle"></i>
+                <div class="stat-info">
+                    <h3 id="adminResolvedIssues">0</h3>
+                    <p>Resolved Issues</p>
+                </div>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-clock"></i>
+                <div class="stat-info">
+                    <h3 id="adminInProgress">0</h3>
+                    <p>In Progress</p>
+                </div>
+            </div>
+        </div>
+
+        <h2 style="margin-bottom: 20px; color: var(--dark);">Recent Issues</h2>
+        <div id="adminIssuesContainer" class="issues-grid">
+            <!-- Issues will be loaded here -->
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics - CivicConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-city"></i> CivicConnect
+            </div>
+            <div class="nav-links">
+                <a href="admin.html" class="nav-link">Dashboard</a>
+                <a href="admin-issues.html" class="nav-link">Issue Management</a>
+                <a href="#" id="analyticsLogout" class="nav-link btn-primary" style="background: var(--danger);">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="welcome-bar">
+            <h1><i class="fas fa-chart-pie"></i> Analytics</h1>
+            <a href="admin.html" class="btn btn-outline">Back to Dashboard</a>
+        </div>
+
+        <div class="admin-stats">
+            <div class="stat-item">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div class="stat-info">
+                    <h3 id="analyticsTotalIssues">0</h3>
+                    <p>Total Issues</p>
+                </div>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-check-circle"></i>
+                <div class="stat-info">
+                    <h3 id="analyticsResolvedRate">0%</h3>
+                    <p>Resolution Rate</p>
+                </div>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-clock"></i>
+                <div class="stat-info">
+                    <h3 id="analyticsAvgDays">0</h3>
+                    <p>Avg Resolution Days</p>
+                </div>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-copy"></i>
+                <div class="stat-info">
+                    <h3 id="analyticsDuplicates">0</h3>
+                    <p>Duplicate Issues</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="background: white; padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow); margin-bottom: 30px;">
+            <h3 style="margin-bottom: 20px; color: var(--dark);">Issues by Category</h3>
+            <div id="categoryChart">
+                <!-- Category breakdown will be loaded here -->
+            </div>
+        </div>
+
+        <div style="background: white; padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow);">
+            <h3 style="margin-bottom: 20px; color: var(--dark);">Issues by Department</h3>
+            <div id="departmentChart">
+                <!-- Department breakdown will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/analytics.js"></script>
+</body>
+</html>

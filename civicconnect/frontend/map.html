@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map View - CivicConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        #map { height: 700px; width: 100%; border-radius: 8px; }
+        .map-container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        .map-header { margin-bottom: 20px; }
+        .map-header h1 { font-size: 1.75rem; color: var(--dark); }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-city"></i> CivicConnect
+            </div>
+            <div class="nav-links">
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="browse.html" class="nav-link">Browse Issues</a>
+                <a href="login.html" class="nav-link btn-primary">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="map-container">
+        <div class="map-header">
+            <h1><i class="fas fa-map-marked-alt"></i> Issue Map</h1>
+            <p>View all reported civic issues on the interactive map</p>
+        </div>
+        <div id="map"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/map.js"></script>
+</body>
+</html>

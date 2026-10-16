@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CivicConnect - Report Civic Issues</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-city"></i> CivicConnect
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="map.html" class="nav-link">Map View</a>
+                <a href="browse.html" class="nav-link">Browse Issues</a>
+                <a href="login.html" class="nav-link btn-primary">Login</a>
+                <a href="register.html" class="nav-link btn-register">Register</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Make Your Community Better</h1>
+            <p>Report civic issues in your neighborhood and get them resolved faster with CivicConnect.</p>
+            <div class="hero-actions">
+                <a href="report.html" class="btn btn-large btn-primary">Report an Issue</a>
+                <a href="browse.html" class="btn btn-large btn-outline">Browse Issues</a>
+            </div>
+        </div>
+    </header>
+    <section class="stats">
+        <div class="container">
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>CC-1001+</h3>
+                    <p>Complaints Registered</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>85%</h3>
+                    <p>Resolution Rate</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>7 days</h3>
+                    <p>Average Resolution Time</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <h3>5K+</h3>
+                    <p>Active Citizens</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why CivicConnect?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Easy Reporting</h3>
+                    <p>Report issues with photos, location, and description in minutes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Location Tracking</h3>
+                    <p>Pinpoint issues on interactive maps for faster response.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-thumbs-up"></i></div>
+                    <h3>Community Support</h3>
+                    <p>Upvote issues to increase their priority and visibility.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-robot"></i></div>
+                    <h3>AI Classification</h3>
+                    <p>AI-powered image classification suggests issue categories.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h3>Progress Tracking</h3>
+                    <p>Track your issue from report to resolution in real-time.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Admin Dashboard</h3>
+                    <p>Municipal staff can manage, assign, and resolve issues efficiently.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Report</h3>
+                    <p>Submit a civic issue with photo, location, and description.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Verify</h3>
+                    <p>City officials verify and assign the issue to the right department.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Resolve</h3>
+                    <p>The department resolves the issue and updates the status.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Confirm</h3>
+                    <p>You confirm resolution and provide feedback.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-city"></i> CivicConnect
+                    <p>Empowering citizens to build better communities.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#">Home</a>
+                    <a href="#">Report Issue</a>
+                    <a href="#">Browse Issues</a>
+                    <a href="#">Admin Dashboard</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>support@civicconnect.com</p>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CivicConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Details - CivicConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-city"></i> CivicConnect
+            </div>
+            <div class="nav-links">
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="login.html" class="nav-link btn-primary">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container" style="max-width: 800px;">
+        <div class="welcome-bar">
+            <h1>Issue Details</h1>
+            <a href="browse.html" class="btn btn-outline">Back to Browse</a>
+        </div>
+
+        <div id="issueDetail" class="form-card" style="display: none;">
+            <div class="issue-header">
+                <span class="issue-complaint-id" id="detailComplaintId">CC-0000</span>
+                <span class="status-badge" id="detailStatus" style="margin-left: auto;">Reported</span>
+            </div>
+            <h2 id="detailTitle" style="margin-bottom: 15px;"></h2>
+            <div class="issue-category" id="detailCategory">Road & Pothole</div>
+            <p id="detailDescription" style="color: var(--secondary); margin-bottom: 20px; line-height: 1.6;"></p>
+
+            <div class="issue-meta" style="margin-bottom: 20px;">
+                <span><i class="fas fa-map-marker-alt"></i> <span id="detailLocation"></span></span>
+                <span><i class="fas fa-calendar"></i> <span id="detailDate"></span></span>
+                <span><i class="fas fa-user"></i> <span id="detailReporter"></span></span>
+                <span><i class="fas fa-exclamation-circle" style="color: var(--danger);"></i> <span id="detailSeverity" class="priority-medium">Medium</span></span>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <img id="detailPhoto" src="" alt="Issue Photo" style="max-width: 100%; border-radius: var(--radius); display: none;">
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <h3 style="margin-bottom: 10px; color: var(--dark);">Community Support</h3>
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <button id="supportBtn" class="btn btn-primary" style="padding: 10px 20px; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-thumbs-up"></i> <span id="supportText">Support</span>
+                    </button>
+                    <span id="supportCount" style="font-weight: 600; color: var(--dark);">0 supports</span>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <h3 style="margin-bottom: 10px; color: var(--dark);">Your Feedback</h3>
+                <form id="feedbackForm" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <button type="button" class="btn btn-outline" onclick="submitFeedback('Resolved')" style="flex: 1;">Resolved</button>
+                    <button type="button" class="btn btn-outline" onclick="submitFeedback('Not Resolved')" style="flex: 1;">Not Resolved</button>
+                    <button type="button" class="btn btn-outline" onclick="submitFeedback('Acknowledged')" style="flex: 1;">Acknowledged</button>
+                </form>
+                <div id="feedbackMsg" style="margin-top: 10px; font-size: 0.9rem; color: var(--success);"></div>
+            </div>
+
+            <div id="updatesSection" style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border);">
+                <h3 style="margin-bottom: 15px; color: var(--dark);">Status Updates</h3>
+                <div id="updatesList"></div>
+            </div>
+        </div>
+
+        <div id="loadingDetail" style="text-align: center; padding: 40px; color: var(--secondary);">
+            <i class="fas fa-spinner fa-spin"></i> Loading issue details...
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/issue.js"></script>
+</body>
+</html>

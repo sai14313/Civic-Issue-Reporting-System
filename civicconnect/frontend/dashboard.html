@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citizen Dashboard - CivicConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-city"></i> CivicConnect
+            </div>
+            <div class="nav-links">
+                <a href="browse.html" class="nav-link">Browse Issues</a>
+                <a href="map.html" class="nav-link">Map View</a>
+                <a href="report.html" class="nav-link btn-primary">Report Issue</a>
+                <a href="#" id="navUser" class="nav-link">Profile</a>
+                <a href="#" id="navLogout" class="nav-link btn-primary" style="background: var(--danger);">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="welcome-bar">
+            <h1 id="welcomeName">Welcome, Citizen!</h1>
+            <div id="notifBadge" style="position: relative;">
+                <i class="fas fa-bell" style="font-size: 1.5rem; cursor: pointer;"></i>
+                <span id="notifCount" style="position: absolute; top: -5px; right: -10px; background: var(--danger); color: white; font-size: 10px; padding: 2px 6px; border-radius: 50%;">0</span>
+            </div>
+        </div>
+
+        <div class="dashboard-stats">
+            <div class="stat-item">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div class="stat-info">
+                    <h3 id="totalIssues">0</h3>
+                    <p>Total Issues Reported</p>
+                </div>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-clock"></i>
+                <div class="stat-info">
+                    <h3 id="pendingIssues">0</h3>
+                    <p>Pending Resolution</p>
+                </div>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-check-circle"></i>
+                <div class="stat-info">
+                    <h3 id="resolvedIssues">0</h3>
+                    <p>Issues Resolved</p>
+                </div>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-thumbs-up"></i>
+                <div class="stat-info">
+                    <h3 id="totalSupport">0</h3>
+                    <p>Community Support Received</p>
+                </div>
+            </div>
+        </div>
+
+        <h2 style="margin-bottom: 20px; color: var(--dark);">Your Issues</h2>
+        <div id="userIssues" class="issues-grid">
+            <!-- User issues will be loaded here -->
+        </div>
+
+        <div id="noIssues" style="text-align: center; padding: 40px; color: var(--secondary); display: none;">
+            <i class="fas fa-inbox" style="font-size: 3rem; margin-bottom: 15px; opacity: 0.3;"></i>
+            <p>No issues reported yet. <a href="report.html" style="color: var(--primary); font-weight: 600;">Report your first issue</a></p>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

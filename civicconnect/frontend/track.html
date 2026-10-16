@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Complaint - CivicConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-city"></i> CivicConnect
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="login.html" class="nav-link btn-primary">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="auth-container" style="max-width: 500px;">
+        <div class="auth-card">
+            <h2><i class="fas fa-search-location"></i> Track Complaint</h2>
+            <p style="color: var(--secondary); margin-bottom: 25px;">Enter your complaint ID to track the status of your issue.</p>
+            <form id="trackForm">
+                <div class="form-group">
+                    <label for="complaintId">Complaint ID</label>
+                    <input type="text" id="complaintId" placeholder="e.g., CC-1001" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Track Issue</button>
+            </form>
+            <div class="auth-footer">
+                <a href="index.html">Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="trackResult" style="max-width: 600px; margin: 30px auto; padding: 0 20px; display: none;">
+        <div class="form-card">
+            <h2 id="trackTitle">Issue Status</h2>
+            <div class="issue-complaint-id" id="trackComplaintId" style="margin-bottom: 20px; display: block;">CC-0000</div>
+            <div class="issue-meta" style="margin-bottom: 20px;">
+                <span><i class="fas fa-tag"></i> <span id="trackCategory"></span></span>
+                <span><i class="fas fa-map-marker-alt"></i> <span id="trackLocation"></span></span>
+                <span><i class="fas fa-clock"></i> <span id="trackDate"></span></span>
+            </div>
+            <div style="text-align: center;">
+                <span class="status-badge" id="trackStatus" style="font-size: 1rem; padding: 8px 16px;">Reported</span>
+            </div>
+            <p id="trackDescription" style="margin-top: 20px; color: var(--secondary);"></p>
+            <a href="issue.html" class="btn btn-primary" style="margin-top: 20px;">View Full Details</a>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/track.js"></script>
+</body>
+</html>

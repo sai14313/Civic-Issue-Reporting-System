@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Issues - CivicConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-city"></i> CivicConnect
+            </div>
+            <div class="nav-links">
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="map.html" class="nav-link">Map View</a>
+                <a href="login.html" class="nav-link btn-primary">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="welcome-bar">
+            <h1><i class="fas fa-list"></i> Browse Issues</h1>
+            <div style="display: flex; gap: 10px;">
+                <select id="statusFilter" style="padding: 8px 16px; border: 1px solid var(--border); border-radius: var(--radius);">
+                    <option value="">All Status</option>
+                    <option value="Reported">Reported</option>
+                    <option value="Verified">Verified</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Resolved">Resolved</option>
+                </select>
+                <select id="categoryFilter" style="padding: 8px 16px; border: 1px solid var(--border); border-radius: var(--radius);">
+                    <option value="">All Categories</option>
+                    <option value="Road & Pothole">Road & Pothole</option>
+                    <option value="Streetlight">Streetlight</option>
+                    <option value="Garbage & Sanitation">Garbage & Sanitation</option>
+                    <option value="Water Supply">Water Supply</option>
+                    <option value="Drainage">Drainage</option>
+                    <option value="Public Safety">Public Safety</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="issuesContainer" class="issues-grid">
+            <!-- Issues will be loaded here -->
+        </div>
+
+        <div id="loading" style="text-align: center; padding: 40px; color: var(--secondary);">
+            <i class="fas fa-spinner fa-spin"></i> Loading issues...
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/browse.js"></script>
+</body>
+</html>

@@ -1,5 +1,8 @@
 // CivicConnect - API Helper
-const API_BASE = window.location.origin;
+// If your backend is on a different domain than your frontend, set API_BASE here:
+// const API_BASE = 'https://your-backend.onrender.com';
+// Otherwise it defaults to the current origin (same-domain deployment).
+const API_BASE = window.API_BASE || window.location.origin;
 
 async function apiRequest(endpoint, options = {}) {
     const token = localStorage.getItem('civicconnect_token');

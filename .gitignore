@@ -1,0 +1,15 @@
+# SQLite database
+civicconnect.db
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyc
+
+# Virtual environment
+venv/
+.env
+
+# OS generated files
+.DS_Store
+Thumbs.db
